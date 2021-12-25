@@ -26,7 +26,7 @@ public class PlayerJoinListener implements Listener {
         final Player player = event.getPlayer();
         final UUID uuid = player.getUniqueId();
 
-        // Check if the player's UUID is not inside the hashmap, if not, add it.
+        // Check if the player's UUID is not inside the hashmap, if not, add it.e
         if (!userHandler.exists(uuid)) {
             userHandler.register(player.getUniqueId(), player.getName(), 1);
         }
