@@ -2,3 +2,7 @@ name: RevBlocks
 version: '${project.version}'
 main: me.hyperburger.revblocks.RevBlocks
 api-version: 1.13
+commands:
+  revblocks:
+    aliases:
+      - rb

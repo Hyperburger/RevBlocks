@@ -12,7 +12,7 @@ import java.util.UUID;
 public class PlayerJoinListener implements Listener {
 
     private final RevBlocks plugin;
-    private UserHandler userHandler;
+    private final UserHandler userHandler;
 
     public PlayerJoinListener(RevBlocks plugin, UserHandler userHandler){
         this.plugin = plugin;
@@ -26,9 +26,9 @@ public class PlayerJoinListener implements Listener {
         final Player player = event.getPlayer();
         final UUID uuid = player.getUniqueId();
 
-        // Check if the player's UUID is not inside the hashmap, if not, add it.e
-        if (!userHandler.exists(uuid)) {
-            userHandler.register(player.getUniqueId(), player.getName(), 1);
+            // Check to see if the player exists in the HashMap, if not register.
+            if (!userHandler.exists(uuid)) {
+                userHandler.register(uuid, player.getName(), 1); // Default block value of 1.
+            }
         }
     }
-}

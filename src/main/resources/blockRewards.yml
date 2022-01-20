@@ -1,0 +1,9 @@
+Rewards:
+  reward1:
+    blocksNeeded: 2000
+    Commands:
+      -
+  reward2:
+    blocksNeeded: 2000
+    Commands:
+      -

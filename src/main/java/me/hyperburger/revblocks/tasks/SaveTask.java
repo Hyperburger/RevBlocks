@@ -33,12 +33,14 @@ public class SaveTask extends BukkitRunnable {
             // Get the user.
             User user = userHandler.findUser(uuid);
 
-            String name = user.getName();
-            int blockCount = user.getBlockCount();
+            String name = user.getName(); // User's name.
+            int blockCount = user.getBlockCount(); // User's block count.
 
+            // Save the data.
             cs.set(name + ".uuid", user.getUuid().toString());
             cs.set(name + ".blockCount", blockCount);
 
+            // Save the config and debug.
             plugin.saveConfig();
             Bukkit.broadcastMessage("Task saved, saved users");
 

@@ -3,13 +3,11 @@ package me.hyperburger.revblocks.user;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 
-import java.util.HashMap;
-import java.util.Objects;
-import java.util.UUID;
+import java.util.*;
 
-public final class User {
+public final class User{
 
-    private final UUID uuid;
+    private UUID uuid;
     private String name;
     private int blockCount;
 
@@ -37,6 +35,17 @@ public final class User {
 
     public void setBlockCount(int blockCount) {
         this.blockCount = blockCount;
+    }
+
+    public void addBlockCount(int number){
+        this.blockCount += number;
+    }
+    public void removeBlockCount(int number){
+        this.blockCount -= number;
+    }
+
+    public void incBlockCount(){
+        this.blockCount  = blockCount + 1;
     }
 
     public void sendMessage(final String message){
