@@ -1,8 +1,26 @@
 name: RevBlocks
 version: '${project.version}'
 main: me.hyperburger.revblocks.RevBlocks
+softdepend: [PlaceholderAPI] # This is used, if your plugin works without PlaceholderAPI.
 api-version: 1.13
 commands:
   revblocks:
     aliases:
       - rb
+      - blocks
+      - block
+permissions:
+  revblocks.view:
+    description: command permission
+  revblocks.add:
+    description: command permission
+  revblocks.check:
+    description: command permission
+  revblocks.global:
+    description: command permission
+  revblocks.reload:
+    description: command permission
+  revblocks.remove:
+    description: command permission
+  revblocks.set:
+    description: command permission

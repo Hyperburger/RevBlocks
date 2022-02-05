@@ -30,7 +30,13 @@ public class Check extends SubCommand{
     }
 
     @Override
+    public String permission() {
+        return "revblocks.check";
+    }
+
+    @Override
     public void perform(Player player, String[] args, Plugin plugin) {
+
         if (args.length > 1){
             Player target = Bukkit.getPlayer(args[1]);
 
@@ -42,7 +48,6 @@ public class Check extends SubCommand{
                                         + user.getName()
                                         + "&f has &e" + user.getBlockCount()
                                         + "&f blocks mined."));
-
             }
         } else if (args.length == 1){
             player.sendMessage(Utilis.hexMessage("&cWrong Usage: /revblocks check <player> "));

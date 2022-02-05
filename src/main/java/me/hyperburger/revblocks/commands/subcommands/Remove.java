@@ -22,12 +22,17 @@ public class Remove extends SubCommand{
 
     @Override
     public String getDescription() {
-        return "removes blocks from the player";
+        return "removes block value from the player.";
     }
 
     @Override
     public String getSyntax() {
         return "/revblocks remove <player> <blocks>";
+    }
+
+    @Override
+    public String permission() {
+        return "revblocks.remove";
     }
 
     @Override

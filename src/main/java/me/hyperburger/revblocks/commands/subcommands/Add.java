@@ -21,12 +21,17 @@ public class Add extends SubCommand{
 
     @Override
     public String getDescription() {
-        return "Add to a player block count";
+        return "add block value.";
     }
 
     @Override
     public String getSyntax() {
         return "/revblocks add <player> <blocks>";
+    }
+
+    @Override
+    public String permission() {
+        return "revblocks.add";
     }
 
     @Override

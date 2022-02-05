@@ -5,8 +5,12 @@ import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
 
 public class Utilis {
+
     static public final String WITH_DELIMITER = "((?<=%1$s)|(?=%1$s))";
 
+    public static String color(String message){
+        return ChatColor.translateAlternateColorCodes('&', message);
+    }
 
     /**
      * Executable by players or console.

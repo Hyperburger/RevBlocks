@@ -22,12 +22,17 @@ public class Set extends SubCommand{
 
     @Override
     public String getDescription() {
-        return "sets the value of the blocks broken.";
+        return "set the block value.";
     }
 
     @Override
     public String getSyntax() {
         return "/revblocks set <player> <blocks>";
+    }
+
+    @Override
+    public String permission() {
+        return "revblocks.set";
     }
 
     @Override
